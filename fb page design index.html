@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Words - Urdu English Bol Chaal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: sans-serif;
+      padding: 15px 8px;
+      background: #d0fff9;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 22px;
+    }
+
+    .words-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      width: 99%;
+      margin: auto;
+    }
+.dagger-row {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: bold;
+  clip-path: polygon(0% 50%, 10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%);
+  color: #57ee1b;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Pseudo-element for animated background */
+.dagger-row::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 200%; /* make it wider for sliding effect */
+  height: 100%;
+  background: linear-gradient(90deg, rgba(87,238,27,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(87,238,27,0.3) 100%);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: none; /* remove single transition */
+}
+
+/* Start animation on hover */
+.dagger-row:hover::before {
+  animation: slideBG 2s linear infinite; /* continuous movement */
+}
+
+/* Keyframes for background sliding */
+@keyframes slideBG {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.dagger-row:hover {
+  color: black; /* text color change */
+  font-size: 20px; /* text size change */
+}
+
+
+
+
+    .row1 { background: linear-gradient(36deg, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row2 { background: linear-gradient(60deg, gold, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row3 { background: linear-gradient(210deg, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row4 { background: linear-gradient(0deg, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row5 { background: linear-gradient(to right, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row6 { background: linear-gradient(to left, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row7 { background: linear-gradient(to top, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row8 { background: linear-gradient(160deg, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row9 { background: linear-gradient(160deg, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+    .row10 { background: linear-gradient(to bottom, red, blue, pink, lavender, teal, indigo, blue, black, yellow, green, violet, gray, red, teal, orange); }
+
+    .footer {
+      margin: 25px 0 10px;
+      text-align: center;
+      font-size: 10px;
+      background-color: green;
+      color: #fff;
+      font-weight: bold;
+      direction: rtl;
+      padding: 8px;
+      clip-path: polygon(0% 50%, 10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%);
+    }
+
+    #postheading {
+      background-color: #0bf;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 8px 15px;
+      color: yellow;
+      text-align: center;
+      clip-path: polygon(0% 50%, 10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%);
+    }
+    #postnum {
+      font-size: 12px;
+    color: blue;
+    background-color: red;
+    }
+    #watermark {
+      font-size: 66px;
+      color: #fff;
+      background: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      rotate: 45deg;
+      z-index: 199;
+      opacity: 0.5;
+      width: 100px;
+      height: auto;
+      margin-top: 300px;
+      margin-bottom: 200px;
+      margin-right: 600px;
+
+
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="postheading"> Weather Words <br> اردو انگلش بول چال <br>
+<span id="postnum">post144</span>
+  <div class="words-container">
+    <div class="dagger-row row1" alt="Rain" title="Water falls down from sky"><img src="https://media.istockphoto.com/id/1257951336/photo/transparent-umbrella-under-rain-against-water-drops-splash-background-rainy-weather-concept.jpg?s=612x612&w=0&k=20&c=lNvbIw1wReb-owe7_rMgW8lZz1zElqs5BOY1AZhyRXs="> water<span>Rain</span><span>بارش</span></div>
+    <div class="dagger-row row2" alt="Cloud" title="The light we get from the sun."><span>Sunny</span><span>دھوپ</span></div>
+    <div class="dagger-row row3" alt="Cloud" title="White fluffy things in the sky."><span>Cloud</span><span>بادل</span></div>
+    <div class="dagger-row row4" alt="Storm" title="A violent disturbance of the atmosphere."><span>Storm</span><span>طوفان</span></div>
+    <div class="dagger-row row5" alt="Flood" title="An overflow of water that submerges land."><span>Flood</span><span>سیلاب</span></div>
+    <div class="dagger-row row6" alt="Thunder" title="The sound caused by lightning."><span>Thunder</span><span>کڑک</span></div>
+    <div class="dagger-row row7" alt="Lightning"title="A sudden electrostatic discharge."><span>Lightning</span><span>بجلی چمک</span></div>
+    <div class="dagger-row row8" alt="Snow" title="Frozen precipitation."><span>Snow</span><span>برف</span></div>
+    <div class="dagger-row row9" alt="Hail" title="Pellets of frozen rain."><span>Hail</span><span>اولے</span></div>
+    <div class="dagger-row row10"alt="Wind" title="Moving air."><span>Wind</span><span>ہوا</span></div>
+    <div class="dagger-row row1" alt="Breeze" title="A gentle wind."><span>Breeze</span><span>ٹھنڈی ہوا</span></div>
+    <div class="dagger-row row2" alt="Fog" title="A thick cloud of tiny water droplets."><span>Fog</span><span>کہر</span></div>
+    <div class="dagger-row row3" alt="Mist" title="A thin fog."><span>Mist</span><span>دھند</span></div>
+    <div class="dagger-row row4" alt="Drought" title="A prolonged dry period."><span>Drought</span><span>قحط</span></div>
+    <div class="dagger-row row5" alt="Drizzle" title="Light rain."><span>Drizzle</span><span>ہلکی بارش</span></div>
+    <div class="dagger-row row6" alt="Heatwave" title="A prolonged period of excessively hot weather."><span>Heatwave</span><span>گرمی کی لہر</span></div>
+    <div class="dagger-row row7" alt="Cold" title="Low temperature."><span>Cold</span><span>سردی</span></div>
+    <div class="dagger-row row8" alt="Humidity" title="Amount of moisture in the air."><span>Humidity</span><span>نمی</span></div>
+    <div class="dagger-row row9" alt="Rainbow" title="A meteorological phenomenon."><span>Rainbow</span><span>قوس و قزح</span></div>
+    <div class="dagger-row row10" alt="Temperature" title="The degree of heat present in a substance."><span>Temperature</span><span>درجہ حرارت</span></div>
+  </div>
+
+  <p class="footer" alt="Urdu English Conversation" title="Like our facebook Page'Urdu English Conversation'">اپنی انگلش بہتر کرنے کے لیے فیس بک<br> پر پیج کو فالو/لائک کریں۔</p>
+    <h1 id="watermark">Urd English conversation </h1>
+  </h2> 
+
+</body>
+</html>
